@@ -1,0 +1,5 @@
+{
+    "npm-intellisense.scanDevDependencies": true,
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "files.autoSave": "afterDelay"
+}
