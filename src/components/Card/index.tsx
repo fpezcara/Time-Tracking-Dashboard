@@ -10,45 +10,57 @@ import { CardDetails } from "./types";
 const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-end; */
-  /* align-items: center; */
+  align-items: center;
   font-family: "Rubik";
-  background-color: hsl(235, 46%, 20%);
   color: white;
-  border-radius: 0.8em;
+  border-radius: 1.5em;
 `;
 
 const CardBody = styled.div`
-  width: 14em;
   display: flex;
   flex-direction: column;
+  background-color: hsl(235, 46%, 20%);
+  width: 13em;
   border-radius: 0.8em;
-  padding: 1em;
-  /* background-color: hsl(235, 46%, 20%); */
+  padding: 0.6em 0.5em;
+  margin-top: -0.8em;
+  div {
+    margin: 0 0.3em;
+    padding: 0 0.2em;
+  }
 `;
 const CardBodyHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: white;
+
   img {
-    width: 2em;
-    height: 0.5em;
+    width: 1.2em;
+    height: 0.3em;
   }
   h3 {
     font-size: 18px;
+    font-weight: 400;
   }
 `;
 
 const CardBodyMain = styled.div`
-  /* display: flex;
-  flex-direction: column; */
-  /* align-items: center; */
+  display: flex;
+  flex-direction: column;
+  p {
+    font-size: 3em;
+    font-weight: 300;
+    margin: 0.1em 0 0.1em 0;
+  }
+  span {
+    font-weight: 400;
+    margin: 0.5em 0;
+    color: hsl(236, 100%, 87%);
+  }
 `;
 
 const Card = ({ title, current, previous }: CardDetails) => {
-  console.log(title);
-
   return (
     <CardContainer>
       {styles.map(
@@ -58,14 +70,16 @@ const Card = ({ title, current, previous }: CardDetails) => {
           ),
       )}
       <CardBody>
-        <CardBodyHeader>
-          <h3>{title}</h3>
-          <img src={iconEllipsis} />
-        </CardBodyHeader>
-        <CardBodyMain>
-          <p>{current} hrs</p>
-          <span>Yesterday - {previous} hrs</span>
-        </CardBodyMain>
+        <div>
+          <CardBodyHeader>
+            <h3>{title}</h3>
+            <img src={iconEllipsis} />
+          </CardBodyHeader>
+          <CardBodyMain>
+            <p>{current}hrs</p>
+            <span>Yesterday - {previous} hrs</span>
+          </CardBodyMain>
+        </div>
       </CardBody>
     </CardContainer>
   );

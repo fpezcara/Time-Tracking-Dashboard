@@ -10,13 +10,13 @@ const Container = styled.div<{ bgColor: CardHeaderStyle["bgColor"] }>`
   background-color: ${({ bgColor }) => bgColor};
   overflow: hidden;
   height: 2em;
-  width: 15em;
+  width: 12em;
   padding: 0.6em 0.9em;
-  border-radius: 0.4em;
-  margin-bottom: -0.7em;
+  border-radius: 0.5em;
+  margin-bottom: 0em;
   img {
     width: 3.5em;
-    height: 3.5em;
+    height: 4em;
   }
 `;
 
