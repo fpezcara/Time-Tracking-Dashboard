@@ -13,15 +13,6 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
   - [My process](#my-process)
     - [Built with](#built-with)
 
-    - [Continued development](#continued-development)
-    - [Useful resources](#useful-resources)
-  - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
-  
-    - [Useful resources](#useful-resources)
-  - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
-
 ## Overview
 
 ### The challenge
@@ -59,7 +50,6 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Styled-components
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 - [Styled Components](https://styled-components.com/) - For styles

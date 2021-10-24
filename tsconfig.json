@@ -1,9 +1,18 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "typeRoots": ["@types", "node_modules/@types"],
-    "types": ["vite/client"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "typeRoots": [
+      "@types",
+      "node_modules/@types"
+    ],
+    "types": [
+      "vite/client"
+    ],
     "checkJs": true,
     "allowJs": true,
     "skipLibCheck": false,
@@ -18,5 +27,10 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "include": ["./src", "src/**/*.ts", "** /*.ts", "**/*.tsx"]
+  "include": [
+    "./src",
+    "src/**/*.ts",
+    "** /*.ts",
+    "**/*.tsx"
+  ]
 }

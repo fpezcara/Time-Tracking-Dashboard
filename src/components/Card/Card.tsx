@@ -11,7 +11,6 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Rubik";
   color: white;
   border-radius: 1.5em;
 `;
