@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
-interface User {
-  firstName: string;
-  lastName: string;
-  timeframe: "daily" | "weekly" | "monthly";
-}
+import userPic from "../../assets/images/image-jeremy.png";
+
+import { UserCardDetails } from "./types";
+
+type Props = UserCardDetails;
 
 const Container = styled.div`
   color: white;
@@ -19,11 +19,10 @@ const Header = styled.div`
   justify-content: center;
   background-color: hsl(246, 80%, 60%);
   min-width: 13em;
-  min-height: 17em;
+  min-height: 17.4em;
   border-radius: 0.8em;
   z-index: 2;
   padding: 0.9em 1.3em 2.9em;
-
   img {
     width: 5em;
     height: auto;
@@ -51,42 +50,51 @@ const Body = styled.div`
   border-radius: 0.8em;
   margin-top: -1em;
   padding: 1.5em 1.4em;
-  color: hsl(236, 100%, 87%);
-  font-size: 14px;
-  p {
+  font-size: 13px;
+  font-weight: 400;
+  ul {
+    cursor: pointer;
+    list-style-type: none;
     padding: 0;
-    margin: 0.6em 0;
+    margin: 0.1em 0;
   }
 `;
 
-const UserCard = () => {
-  const user = {
-    firstName: "Jeremy",
-    lastName: "Robson",
+const Li = styled.li`
+  padding: 0;
+  margin: 0.6em 0;
+  color: ${({ color }) => color};
+  text-transform: capitalize;
+`;
+
+const UserCard = ({ setTimeFrame, timeFrame, user }: UserCardDetails) => {
+  const timeframes = ["daily", "weekly", "monthly"];
+  // agregar "last month", "yesterday", "last week"
+
+  const handleClick = (t: Props["timeFrame"]) => {
+    setTimeFrame(t);
   };
-
-  // no se como asignar el tipo aca
-
-  const [timeFrame, setTimeFrame] = useState<User["timeframe"]>("daily");
 
   return (
     <Container>
       <Header>
-        <img src="/src/assets/images/image-jeremy.png" />
+        <img src={userPic} />
         <span>Report for</span>
         <p>{user.firstName}</p>
         <p>{user.lastName}</p>
       </Header>
       <Body>
-        <a>
-          <p>Daily</p>
-        </a>
-        <a>
-          <p>Weekly</p>
-        </a>
-        <a>
-          <p>Monthly</p>
-        </a>
+        {timeframes.map((t, i) => (
+          <ul key={i}>
+            <Li
+              color={t === timeFrame ? "white" : "hsl(236, 100%, 87%)"}
+              value={timeFrame}
+              onClick={() => handleClick(t as UserCardDetails["timeFrame"])}
+            >
+              {t}
+            </Li>
+          </ul>
+        ))}
       </Body>
     </Container>
   );

@@ -19,10 +19,12 @@ const CardBody = styled.div`
   display: flex;
   flex-direction: column;
   background-color: hsl(235, 46%, 20%);
-  width: 13em;
-  border-radius: 0.8em;
+  width: 13.9em;
+  border-radius: 1em;
   padding: 0.6em 0.5em;
-  margin-top: -0.8em;
+  margin-top: -2em;
+  cursor: pointer;
+
   div {
     margin: 0 0.3em;
     padding: 0 0.2em;
@@ -32,11 +34,13 @@ const CardBodyHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: white;
+  /* color: white; */
 
   img {
-    width: 1.2em;
+    width: 1.6em;
     height: 0.3em;
+    /* color: hsl(236, 100%, 87%); */
+    color: green;
   }
   h3 {
     font-size: 18px;
@@ -59,24 +63,26 @@ const CardBodyMain = styled.div`
   }
 `;
 
-const Card = ({ title, current, previous }: CardDetails) => {
+const Card = ({ title, current, previous, text }: CardDetails) => {
   return (
     <CardContainer>
       {styles.map(
-        (style) =>
+        (style, i) =>
           style.title === title && (
-            <Header bgColor={style.bgColor} img={style.img} title={style.title} />
+            <Header key={i} bgColor={style.bgColor} img={style.img} title={style.title} />
           ),
       )}
       <CardBody>
         <div>
           <CardBodyHeader>
             <h3>{title}</h3>
-            <img src={iconEllipsis} />
+            <img alt="Icon ellipsis" src={iconEllipsis} />
           </CardBodyHeader>
           <CardBodyMain>
             <p>{current}hrs</p>
-            <span>Yesterday - {previous} hrs</span>
+            <span>
+              {text} - {previous} hrs
+            </span>
           </CardBodyMain>
         </div>
       </CardBody>

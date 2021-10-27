@@ -5,28 +5,25 @@ import { CardHeaderStyle } from "./types";
 
 const Container = styled.div<{ bgColor: CardHeaderStyle["bgColor"] }>`
   display: flex;
-  justify-content: flex-end;
+  justify-content: end;
   align-items: center;
   background-color: ${({ bgColor }) => bgColor};
   overflow: hidden;
-  height: 2em;
-  width: 12em;
-  padding: 0.6em 0.9em;
-  border-radius: 0.5em;
-  margin-bottom: 0em;
+  height: 4em;
+  width: 13em;
+  padding: 0 0.9em 0.6em 0.9em;
+  border-radius: 0.8em;
   img {
-    width: 3.5em;
-    height: 4em;
+    width: 4em;
+    height: 100%;
   }
 `;
 
 const Header = ({ title, bgColor, img }: CardHeaderStyle) => {
   return (
-    <>
-      <Container bgColor={bgColor}>
-        <img alt={title} src={img} />
-      </Container>
-    </>
+    <Container bgColor={bgColor}>
+      <img alt={title} src={img} />
+    </Container>
   );
 };
 

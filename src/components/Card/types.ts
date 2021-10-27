@@ -6,29 +6,25 @@ export interface CardHeaderStyle {
   img: string;
 }
 
-export interface CardDetails {
-  title: Categories;
+interface Times {
   current: number;
   previous: number;
 }
 
-// interface Timeframes {
-//   [key: string]: { current: number; previous: number };
+// export interface CardDetails {
+//   title: Categories;
+//   timeframes: { [category in UserCardDetails["timeFrame"]]: Times };
 // }
-// {
-//     "title": "Work",
-//     "timeframes": {
-//       "daily": {
-//         "current": 5,
-//         "previous": 7
-//       },
-//       "weekly": {
-//         "current": 32,
-//         "previous": 36
-//       },
-//       "monthly": {
-//         "current": 103,
-//         "previous": 128
-//       }
-//     }
-//   },
+
+export interface CardDetails {
+  title: Categories;
+  current: number;
+  previous: number;
+  text: "Yesterday" | "Last Week" | "Last Month";
+}
+
+export interface UserCardDetails {
+  user: { firstName: string; lastName: string };
+  timeFrame: "daily" | "weekly" | "monthly";
+  setTimeFrame: (timeframe: UserCardDetails["timeFrame"]) => void;
+}
