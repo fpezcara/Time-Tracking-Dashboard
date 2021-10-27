@@ -24,7 +24,9 @@ const CardBody = styled.div`
   padding: 0.6em 0.5em;
   margin-top: -2em;
   cursor: pointer;
-
+  &:hover {
+    background-color: hsl(236, 40%, 35%);
+  }
   div {
     margin: 0 0.3em;
     padding: 0 0.2em;
@@ -34,18 +36,17 @@ const CardBodyHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* color: white; */
-
-  img {
-    width: 1.6em;
-    height: 0.3em;
-    /* color: hsl(236, 100%, 87%); */
-    color: green;
-  }
   h3 {
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 500;
   }
+`;
+
+const IconEllipsis = styled.img`
+  width: 1.6em;
+  height: 0.4em;
+  fill: red;
+  color: green;
 `;
 
 const CardBodyMain = styled.div`
@@ -57,6 +58,7 @@ const CardBodyMain = styled.div`
     margin: 0.1em 0 0.1em 0;
   }
   span {
+    font-size: 12px;
     font-weight: 400;
     margin: 0.5em 0;
     color: hsl(236, 100%, 87%);
@@ -76,7 +78,7 @@ const Card = ({ title, current, previous, text }: CardDetails) => {
         <div>
           <CardBodyHeader>
             <h3>{title}</h3>
-            <img alt="Icon ellipsis" src={iconEllipsis} />
+            <IconEllipsis alt="Icon ellipsis" src={iconEllipsis} />
           </CardBodyHeader>
           <CardBodyMain>
             <p>{current}hrs</p>
