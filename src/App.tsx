@@ -15,12 +15,21 @@ const Container = styled.div`
   align-items: center;
   background-color: hsl(226, 43%, 10%);
   gap: 1.5em;
+  @media (max-width: 769px) {
+    height: auto;
+    flex-direction: column;
+    padding-top: 4em;
+  }
 `;
 
 const Cards = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.8em;
+  @media (max-width: 769px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const App = () => {
@@ -40,8 +49,6 @@ const App = () => {
         return "Yesterday";
     }
   };
-
-  console.log(cardText(timeFrame));
 
   return (
     <Container className="App">

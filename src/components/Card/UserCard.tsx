@@ -11,6 +11,10 @@ const Container = styled.div`
   color: white;
   display: flex;
   flex-direction: column;
+  @media (max-width: 769px) {
+    justify-content: space-between;
+    align-items: space-between;
+  }
 `;
 
 const Header = styled.div`
@@ -23,13 +27,32 @@ const Header = styled.div`
   border-radius: 0.8em;
   z-index: 2;
   padding: 0.9em 1.3em 2.9em;
+  @media (max-width: 769px) {
+    display: flex;
+    min-width: 20em;
+    min-height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    div {
+      div {
+        display: flex;
+      }
+    }
+  }
   img {
     width: 5em;
     height: auto;
-    border: 2px solid white;
+    border: 3px solid white;
     border-radius: 3em;
     margin-bottom: 3em;
     margin-left: 0.2em;
+    @media (max-width: 769px) {
+      width: 5em;
+      height: 5em;
+      margin: 0;
+    }
   }
   span {
     font-size: 12px;
@@ -39,6 +62,9 @@ const Header = styled.div`
     font-size: 30px;
     margin: 0.1em;
     font-weight: 300;
+    @media (max-width: 769px) {
+      font-size: 25px;
+    }
   }
 `;
 
@@ -50,8 +76,15 @@ const Body = styled.div`
   border-radius: 0.8em;
   margin-top: -1em;
   padding: 1.5em 1.4em;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
+  @media (max-width: 769px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.8em 1.5em 1em;
+    font-size: 16px;
+  }
   ul {
     cursor: pointer;
     list-style-type: none;
@@ -69,7 +102,6 @@ const Li = styled.li`
 
 const UserCard = ({ setTimeFrame, timeFrame, user }: UserCardDetails) => {
   const timeframes = ["daily", "weekly", "monthly"];
-  // agregar "last month", "yesterday", "last week"
 
   const handleClick = (t: Props["timeFrame"]) => {
     setTimeFrame(t);
@@ -78,10 +110,14 @@ const UserCard = ({ setTimeFrame, timeFrame, user }: UserCardDetails) => {
   return (
     <Container>
       <Header>
-        <img src={userPic} />
-        <span>Report for</span>
-        <p>{user.firstName}</p>
-        <p>{user.lastName}</p>
+        <img alt="user" src={userPic} />
+        <div>
+          <span>Report for</span>
+          <div>
+            <p>{user.firstName}</p>
+            <p>{user.lastName}</p>
+          </div>
+        </div>
       </Header>
       <Body>
         {timeframes.map((t, i) => (
