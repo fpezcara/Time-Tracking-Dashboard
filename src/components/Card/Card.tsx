@@ -50,7 +50,6 @@ const CardBodyHeader = styled.div`
   h3 {
     font-size: 17px;
     font-weight: 500;
-    /* margin: 0.8em 0; */
   }
   img {
     width: 1.6em;
@@ -69,7 +68,7 @@ const CardBodyMain = styled.div`
   display: flex;
   flex-direction: column;
   p {
-    font-size: 55px;
+    font-size: 50px;
     font-weight: 300;
     margin: 0em 0 0.1em 0;
   }

@@ -19,10 +19,10 @@ const Header = styled.div`
   justify-content: center;
   background-color: hsl(246, 80%, 60%);
   min-width: 11em;
-  min-height: 16em;
+  min-height: 15em;
   border-radius: 1em;
   z-index: 2;
-  padding: 1.6em 1.3em 2.9em 1.6em;
+  padding: 1.3em 1.3em 3.2em 1.6em;
   @media (max-width: 769px) {
     width: 20.5em;
     min-height: auto;
@@ -41,7 +41,7 @@ const Header = styled.div`
     height: auto;
     border: 3px solid white;
     border-radius: 3em;
-    margin-bottom: 3em;
+    margin-bottom: 1.8em;
     @media (max-width: 769px) {
       width: 5em;
       height: 5em;
@@ -66,14 +66,14 @@ const Header = styled.div`
 const Body = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: end;
   background-color: hsl(235, 46%, 20%);
   overflow: hidden;
   border-radius: 1em;
-  margin-top: -1em;
-  padding: 1.6em;
+  margin-top: -1.6em;
+  padding: 2.4em 1.6em 1.5em 1.9em;
   font-size: 14px;
   font-weight: 400;
-  min-height: 1em;
   @media (max-width: 769px) {
     display: flex;
     flex-direction: row;
@@ -85,7 +85,7 @@ const Body = styled.div`
   ul {
     cursor: pointer;
     list-style-type: none;
-    padding: 0 0.1em;
+    padding: 0 0.3em;
     margin: 0.6em 0;
     @media (max-width: 769px) {
       padding: 0;

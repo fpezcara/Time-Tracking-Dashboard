@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![ScreenShot](http://i.postimg.cc/nVD9cs8w/Time-Tracking-Dashboard-Screenshot.jpg)
+![ScreenShot](https://i.postimg.cc/8CKHVgTh/Time-Tracking-Dashboard-Screenshot.jpg)
 
 ### Links
 

@@ -9,7 +9,7 @@ const Container = styled.div<{ bgColor: CardHeaderStyle["bgColor"] }>`
   align-items: center;
   background-color: ${({ bgColor }) => bgColor};
   overflow: hidden;
-  height: 4.5em;
+  height: 4em;
   width: 12.7em;
   padding: 0 1.1em 0.6em 0.9em;
   border-radius: 0.8em;
