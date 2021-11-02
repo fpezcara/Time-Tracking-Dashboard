@@ -20,7 +20,7 @@ const CardBody = styled.div`
   flex-direction: column;
   background-color: hsl(235, 46%, 20%);
   width: 13.5em;
-  min-height: 11em;
+  min-height: 11.1em;
   border-radius: 1em;
   padding: 0.1em 0.6em;
   margin-top: -2em;

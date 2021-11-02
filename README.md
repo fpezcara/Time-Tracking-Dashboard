@@ -24,9 +24,11 @@ Users should be able to:
 
 ### Screenshot
 
+![ScreenShot](http://i.postimg.cc/nVD9cs8w/Time-Tracking-Dashboard-Screenshot.jpg)
+
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://time-tracking-dashboard-gray.vercel.app/]
 
 ### Built with
 
