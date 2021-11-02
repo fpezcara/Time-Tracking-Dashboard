@@ -1,5 +1,10 @@
 body {
   margin: 0;
+  background-color: hsl(226, 43%, 10%);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* code {
