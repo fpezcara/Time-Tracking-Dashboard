@@ -12,25 +12,25 @@ const CardContainer = styled.div`
   flex-direction: column;
   align-items: center;
   color: white;
-  flex: 1;
+  /* flex: 1; */
 `;
 
 const CardBody = styled.div`
   display: flex;
   flex-direction: column;
   background-color: hsl(235, 46%, 20%);
-  width: 14em;
+  width: 13.5em;
   min-height: 11em;
   border-radius: 1em;
-  padding: 0.4em 0.6em;
+  padding: 0.1em 0.6em;
   margin-top: -2em;
   cursor: pointer;
   &:hover {
     background-color: hsl(236, 40%, 35%);
   }
   div {
-    margin: 0 0.3em;
-    padding: 0 0.4em;
+    margin: 0 0.2em;
+    padding: 0 0.3em;
   }
   @media (max-width: 769px) {
     min-width: 23em;
@@ -49,7 +49,7 @@ const CardBodyHeader = styled.div`
   align-items: center;
   justify-content: space-between;
   h3 {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 500;
   }
   img {
@@ -69,14 +69,14 @@ const CardBodyMain = styled.div`
   display: flex;
   flex-direction: column;
   p {
-    font-size: 3em;
+    font-size: 55px;
     font-weight: 300;
     margin: 0.1em 0 0.1em 0;
   }
   span {
     font-size: 13px;
     font-weight: 400;
-    margin: 0.5em 0;
+    margin: 0.2em 0;
     color: hsl(236, 100%, 87%);
   }
   @media (max-width: 769px) {

@@ -6,16 +6,6 @@ export interface CardHeaderStyle {
   img: string;
 }
 
-interface Times {
-  current: number;
-  previous: number;
-}
-
-// export interface CardDetails {
-//   title: Categories;
-//   timeframes: { [category in UserCardDetails["timeFrame"]]: Times };
-// }
-
 export interface CardDetails {
   title: Categories;
   current: number;

@@ -11,7 +11,7 @@ const Container = styled.div`
   box-sizing: border-box;
   font-family: "Rubik";
   width: auto;
-  min-height: 55.6em;
+  min-height: 50em;
   justify-content: center;
   align-items: center;
   background-color: hsl(226, 43%, 10%);

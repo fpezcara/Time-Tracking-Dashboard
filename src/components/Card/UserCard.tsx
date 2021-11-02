@@ -18,8 +18,8 @@ const Header = styled.div`
   flex-direction: column;
   justify-content: center;
   background-color: hsl(246, 80%, 60%);
-  min-width: 13em;
-  min-height: 18em;
+  min-width: 11em;
+  min-height: 17em;
   border-radius: 0.8em;
   z-index: 2;
   padding: 1.6em 1.3em 2.9em 1.6em;
