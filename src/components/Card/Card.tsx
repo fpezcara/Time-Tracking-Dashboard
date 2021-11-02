@@ -12,7 +12,6 @@ const CardContainer = styled.div`
   flex-direction: column;
   align-items: center;
   color: white;
-  /* flex: 1; */
 `;
 
 const CardBody = styled.div`
@@ -20,9 +19,9 @@ const CardBody = styled.div`
   flex-direction: column;
   background-color: hsl(235, 46%, 20%);
   width: 13.5em;
-  min-height: 11.1em;
+  min-height: 10em;
   border-radius: 1em;
-  padding: 0.1em 0.6em;
+  padding: 0.4em 0.6em;
   margin-top: -2em;
   cursor: pointer;
   &:hover {
@@ -51,6 +50,7 @@ const CardBodyHeader = styled.div`
   h3 {
     font-size: 17px;
     font-weight: 500;
+    /* margin: 0.8em 0; */
   }
   img {
     width: 1.6em;
@@ -71,7 +71,7 @@ const CardBodyMain = styled.div`
   p {
     font-size: 55px;
     font-weight: 300;
-    margin: 0.1em 0 0.1em 0;
+    margin: 0em 0 0.1em 0;
   }
   span {
     font-size: 13px;

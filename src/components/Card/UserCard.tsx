@@ -19,8 +19,8 @@ const Header = styled.div`
   justify-content: center;
   background-color: hsl(246, 80%, 60%);
   min-width: 11em;
-  min-height: 17em;
-  border-radius: 0.8em;
+  min-height: 16em;
+  border-radius: 1em;
   z-index: 2;
   padding: 1.6em 1.3em 2.9em 1.6em;
   @media (max-width: 769px) {
@@ -68,7 +68,7 @@ const Body = styled.div`
   flex-direction: column;
   background-color: hsl(235, 46%, 20%);
   overflow: hidden;
-  border-radius: 0.8em;
+  border-radius: 1em;
   margin-top: -1em;
   padding: 1.6em;
   font-size: 14px;
