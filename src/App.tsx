@@ -8,9 +8,10 @@ import UserCard from "./components/Card/UserCard";
 
 const Container = styled.div`
   display: flex;
+  box-sizing: border-box;
   font-family: "Rubik";
   width: auto;
-  height: 55.6em;
+  min-height: 55.6em;
   justify-content: center;
   align-items: center;
   background-color: hsl(226, 43%, 10%);
@@ -18,7 +19,7 @@ const Container = styled.div`
   @media (max-width: 769px) {
     height: auto;
     flex-direction: column;
-    padding-top: 4em;
+    padding: 4em;
   }
 `;
 

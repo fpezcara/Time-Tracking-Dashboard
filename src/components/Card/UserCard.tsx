@@ -11,10 +11,6 @@ const Container = styled.div`
   color: white;
   display: flex;
   flex-direction: column;
-  @media (max-width: 769px) {
-    justify-content: space-between;
-    align-items: space-between;
-  }
 `;
 
 const Header = styled.div`
@@ -23,18 +19,17 @@ const Header = styled.div`
   justify-content: center;
   background-color: hsl(246, 80%, 60%);
   min-width: 13em;
-  min-height: 17.4em;
+  min-height: 18em;
   border-radius: 0.8em;
   z-index: 2;
-  padding: 0.9em 1.3em 2.9em;
+  padding: 1.6em 1.3em 2.9em 1.6em;
   @media (max-width: 769px) {
-    display: flex;
-    min-width: 20em;
+    width: 20.5em;
     min-height: auto;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 2em;
+    padding: 1.8em;
     div {
       div {
         display: flex;
@@ -47,7 +42,6 @@ const Header = styled.div`
     border: 3px solid white;
     border-radius: 3em;
     margin-bottom: 3em;
-    margin-left: 0.2em;
     @media (max-width: 769px) {
       width: 5em;
       height: 5em;
@@ -59,9 +53,10 @@ const Header = styled.div`
     color: hsl(236, 100%, 87%);
   }
   p {
-    font-size: 30px;
+    font-size: 33px;
     margin: 0.1em;
     font-weight: 300;
+    margin: 0 0.2em 0 0;
     @media (max-width: 769px) {
       font-size: 25px;
     }
@@ -75,29 +70,39 @@ const Body = styled.div`
   overflow: hidden;
   border-radius: 0.8em;
   margin-top: -1em;
-  padding: 1.5em 1.4em;
+  padding: 1.6em;
   font-size: 14px;
   font-weight: 400;
+  min-height: 1em;
   @media (max-width: 769px) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1.8em 1.5em 1em;
+    padding: 1.4em 1.8em 0.8em;
     font-size: 16px;
+    border-radius: 0.9em;
   }
   ul {
     cursor: pointer;
     list-style-type: none;
-    padding: 0;
-    margin: 0.1em 0;
+    padding: 0 0.1em;
+    margin: 0.6em 0;
+    @media (max-width: 769px) {
+      padding: 0;
+      margin: 0 0 0 0.4em;
+    }
   }
 `;
 
 const Li = styled.li`
   padding: 0;
-  margin: 0.6em 0;
+  margin: 0.2em 0;
   color: ${({ color }) => color};
   text-transform: capitalize;
+  @media (max-width: 769px) {
+    padding: 0.8em 0;
+    margin: 0;
+  }
 `;
 
 const UserCard = ({ setTimeFrame, timeFrame, user }: UserCardDetails) => {

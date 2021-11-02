@@ -11,7 +11,7 @@ const Container = styled.div<{ bgColor: CardHeaderStyle["bgColor"] }>`
   overflow: hidden;
   height: 4.5em;
   width: 13.1em;
-  padding: 0 0.9em 0.6em 0.9em;
+  padding: 0 1.1em 0.6em 0.9em;
   border-radius: 0.8em;
   img {
     width: 4em;
@@ -21,6 +21,7 @@ const Container = styled.div<{ bgColor: CardHeaderStyle["bgColor"] }>`
     min-width: 22em;
     min-height: auto;
     border-radius: 1em;
+    padding: 0 1.1em 0.6em 0.9em;
   }
 `;
 

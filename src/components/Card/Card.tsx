@@ -12,7 +12,7 @@ const CardContainer = styled.div`
   flex-direction: column;
   align-items: center;
   color: white;
-  border-radius: 1.5em;
+  flex: 1;
 `;
 
 const CardBody = styled.div`
@@ -20,9 +20,9 @@ const CardBody = styled.div`
   flex-direction: column;
   background-color: hsl(235, 46%, 20%);
   width: 14em;
-  min-height: 9.9em;
+  min-height: 11em;
   border-radius: 1em;
-  padding: 0.6em 0.5em 0.9em;
+  padding: 0.4em 0.6em;
   margin-top: -2em;
   cursor: pointer;
   &:hover {
@@ -36,6 +36,11 @@ const CardBody = styled.div`
     min-width: 23em;
     min-height: auto;
     display: flex;
+    padding: 1em 0.5em;
+    border-radius: 1em;
+    div {
+      padding: 0.2em 0.2em;
+    }
   }
 `;
 
@@ -78,9 +83,8 @@ const CardBodyMain = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 0;
     p {
-      font-size: 35px;
+      font-size: 31px;
       margin: 0;
     }
   }
