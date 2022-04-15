@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![ScreenShot](https://i.postimg.cc/8CKHVgTh/Time-Tracking-Dashboard-Screenshot.jpg)
+[![Time-Tracking-Dashboard-Screenshot.jpg](https://i.postimg.cc/8CKHVgTh/Time-Tracking-Dashboard-Screenshot.jpg)](https://postimg.cc/06Smp3MQ)
 
 ### Links
 
@@ -34,10 +34,6 @@ Users should be able to:
 
 - React JS
 - Typescript
-- Chakra UI
 - Styled-components
 - Flexbox
 - CSS Grid
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles

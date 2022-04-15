@@ -52,7 +52,7 @@ const CardBodyHeader = styled.div`
     font-weight: 500;
   }
   img {
-    width: 1.6em;
+    max-width: 1.6em;
     height: 0.4em;
   }
   @media (max-width: 769px) {
@@ -89,31 +89,29 @@ const CardBodyMain = styled.div`
   }
 `;
 
-const Card = ({ title, current, previous, text }: CardDetails) => {
-  return (
-    <CardContainer>
-      {styles.map(
-        (style, i) =>
-          style.title === title && (
-            <Header key={i} bgColor={style.bgColor} img={style.img} title={style.title} />
-          ),
-      )}
-      <CardBody>
-        <div>
-          <CardBodyHeader>
-            <h3>{title}</h3>
-            <img alt="icon ellipsis" src={iconEllipsis} />
-          </CardBodyHeader>
-          <CardBodyMain>
-            <p>{current}hrs</p>
-            <span>
-              {text} - {previous} hrs
-            </span>
-          </CardBodyMain>
-        </div>
-      </CardBody>
-    </CardContainer>
-  );
-};
+const Card = ({ title, current, previous, text }: CardDetails) => (
+  <CardContainer>
+    {styles.map(
+      (style, i) =>
+        style.title === title && (
+          <Header key={i} bgColor={style.bgColor} img={style.img} title={style.title} />
+        ),
+    )}
+    <CardBody>
+      <div>
+        <CardBodyHeader>
+          <h3>{title}</h3>
+          <img alt="icon ellipsis" src={iconEllipsis} />
+        </CardBodyHeader>
+        <CardBodyMain>
+          <p>{current}hrs</p>
+          <span>
+            {text} - {previous} hrs
+          </span>
+        </CardBodyMain>
+      </div>
+    </CardBody>
+  </CardContainer>
+);
 
 export default Card;

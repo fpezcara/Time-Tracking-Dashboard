@@ -11,10 +11,9 @@ const Container = styled.div`
   box-sizing: border-box;
   font-family: "Rubik";
   width: auto;
-  min-height: 50em;
+  min-height: 55em;
   justify-content: center;
   align-items: center;
-  background-color: hsl(226, 43%, 10%);
   gap: 1.5em;
   @media (max-width: 769px) {
     height: auto;
@@ -51,6 +50,7 @@ const App = () => {
     }
   };
 
+ 
   return (
     <Container className="App">
       <UserCard setTimeFrame={setTimeFrame} timeFrame={timeFrame} user={user} />

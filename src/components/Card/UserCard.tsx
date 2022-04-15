@@ -105,7 +105,7 @@ const Li = styled.li`
   }
 `;
 
-const UserCard = ({ setTimeFrame, timeFrame, user }: UserCardDetails) => {
+const UserCard = ({ setTimeFrame, timeFrame, user }: Props) => {
   const timeframes = ["daily", "weekly", "monthly"];
 
   const handleClick = (t: Props["timeFrame"]) => {

@@ -25,12 +25,10 @@ const Container = styled.div<{ bgColor: CardHeaderStyle["bgColor"] }>`
   }
 `;
 
-const Header = ({ title, bgColor, img }: CardHeaderStyle) => {
-  return (
-    <Container bgColor={bgColor}>
-      <img alt={title} src={img} />
-    </Container>
-  );
-};
+const Header = ({ title, bgColor, img }: CardHeaderStyle) => (
+  <Container bgColor={bgColor}>
+    <img alt={title} src={img} />
+  </Container>
+);
 
 export default Header;
